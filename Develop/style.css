@@ -12,7 +12,7 @@ screen and (max-width: 575px) {
         border-radius: 0.25rem;
         height: 50px;
     }
-    textarea {
+    .textarea {
         min-height: 85px;
         border: 0;
     }
