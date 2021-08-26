@@ -1,6 +1,9 @@
+// current date and time
+
 var todayDate = moment().format("ddd, MMM Do, YYYY h:mm:ss a");
 $("#currentDay").html(todayDate);
 
+// added click event "save button" with local storage
 $(document).ready(function() {
     $(".saveBtn").on("click", function() {
         var inputText = $(this).siblings(".description").val();
@@ -9,6 +12,7 @@ $(document).ready(function() {
         localStorage.setItem(bodyTime, inputText);
     })
 
+    // added function to color code past, present and future task
     function timeTracker() {
         var currentTime = moment().hour();
         $(".time-block").each(function() {
@@ -30,6 +34,7 @@ $(document).ready(function() {
         })
     }
 
+    // retrieve saved information from local storage
     $("#hourOne .description").val(localStorage.getItem("hourOne"));
     $("#hourTwo .description").val(localStorage.getItem("hourTwo"));
     $("#hourThree .description").val(localStorage.getItem("hourThree"));
