@@ -14,39 +14,38 @@ $(document).ready(function() {
 
         localStorage.setItem(bodyTime, inputText);
     })
+});
 
-    // added function to color code past, present and future task
-    function timeTracker() {
-        var currentTime = moment().hour();
-        $(".time-block").each(function() {
-            var scheduleTime = parseInt($(this).attr("id").split(".hour")[1]);
+// retrieve saved information from local storage
+$(".time-block").each(function() {
+    var id = $(this).attr("id");
+    var storedSch = localStorage.getItem(id);
 
-            if (scheduleTime < currentTime) {
-                $(this).addClass("past");
-            } else if (scheduleTime === currentTime) {
-                $(this).addClass("present");
-            } else {
-                $(this).addClass("future");
-
-            }
-        })
+    if (storedSch !== null) {
+        $(this).children(".description").val(storedSch);
     }
+});
 
-    // retrieve saved information from local storage
-    $("#hourOne .description").val(localStorage.getItem("hourOne"));
-    $("#hourTwo .description").val(localStorage.getItem("hourTwo"));
-    $("#hourThree .description").val(localStorage.getItem("hourThree"));
-    $("#hourFour .description").val(localStorage.getItem("hourFour"));
-    $("#hourFive .description").val(localStorage.getItem("hourFive"));
-    $("#hourSix .description").val(localStorage.getItem("hourSix"));
-    $("#hourSeven .description").val(localStorage.getItem("hourSeven"));
-    $("#hourEight .description").val(localStorage.getItem("hourEight"));
-    $("#hourNine .description").val(localStorage.getItem("hourNine"));
-    $("#hourTen .description").val(localStorage.getItem("hourTen"));
-    $("#hourEleven .description").val(localStorage.getItem("hourEleven"));
 
-    timeTracker();
-})
+
+// added function to color code past, present and future task
+
+function timeTracker() {
+    var currentTime = moment().hours();
+    $(".time-block").each(function() {
+        var scheduleTime = parseInt($(this).attr("id"));
+
+        if (scheduleTime > currentTime) {
+            $(this).addClass("future")
+        } else if (scheduleTime === currentTime) {
+            $(this).addClass("present");
+        } else {
+            $(this).addClass("past");
+        }
+    })
+}
+
+timeTracker();
 
 
 // added clear local storge button
