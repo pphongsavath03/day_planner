@@ -54,6 +54,8 @@ $(document).ready(function() {
     timeTracker();
 })
 
+
+// added clear local storge button
 clearBtn.addEventListener("click", function() {
     scheduleInput.innerHTML = "";
     localStorage.clear();
