@@ -3,7 +3,7 @@ var clearBtn = document.querySelector("#clearSch");
 
 // current date and time
 
-var todayDate = moment().format("ddd, MMM Do, YYYY h:mm:ss a");
+var todayDate = moment().format("ddd, MMM Do, YYYY");
 $("#currentDay").html(todayDate);
 
 // added click event "save button" with local storage
