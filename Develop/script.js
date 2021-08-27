@@ -1,3 +1,6 @@
+var scheduleInput = document.querySelector(".description");
+var clearBtn = document.querySelector("#clearSch");
+
 // current date and time
 
 var todayDate = moment().format("ddd, MMM Do, YYYY h:mm:ss a");
@@ -14,9 +17,10 @@ $(document).ready(function() {
 
     // added function to color code past, present and future task
     function timeTracker() {
-        var currentTime = moment().hour();
+        var currentTime = parseInt(moment().hour());
         $(".time-block").each(function() {
-            var scheduleTime = parseInt($(this).attr("id").split("hour")[1]);
+            var scheduleTime = parseInt($(this).attr("id").split(".hour")[1]);
+
             if (scheduleTime < currentTime) {
                 $(this).removeClass("future");
                 $(this).removeClass("present");
@@ -46,15 +50,12 @@ $(document).ready(function() {
     $("#hourNine .description").val(localStorage.getItem("hourNine"));
     $("#hourTen .description").val(localStorage.getItem("hourTen"));
     $("#hourEleven .description").val(localStorage.getItem("hourEleven"));
-    $("#hourTwelve .description").val(localStorage.getItem("hourTwelve"));
-    $("#hourThirteen .description").val(localStorage.getItem("hourThirteen"));
-    $("#hourFourteen .description").val(localStorage.getItem("hourFourteen"));
-    $("#hourFifteen .description").val(localStorage.getItem("hourFifteen"));
-    $("#hourSixteen .description").val(localStorage.getItem("hourSixteen"));
-    $("#hourSeventeen .description").val(localStorage.getItem("hourSeventeen"));
-    $("#hourEighteen .description").val(localStorage.getItem("hourEighteen"));
-    $("#hourNinteen .description").val(localStorage.getItem("hourNinteen"));
-    $("#hourTwenty .description").val(localStorage.getItem("hourTwenty"));
 
     timeTracker();
 })
+
+clearBtn.addEventListener("click", function() {
+    scheduleInput.innerHTML = "";
+    localStorage.clear();
+    window.location.reload()
+});

@@ -17,12 +17,16 @@
         <h1 class="display-3">Work Day Scheduler</h1>
         <p class="lead">A simple calendar app for scheduling your work day</p>
         <p id="currentDay" class="lead"></p>
+        <div>
+            <button class="btn btn-dark " id="clearSch">Clear Schedule</button>
+        </div>
     </header>
     <div class="container">
         <!-- Timeblocks go here -->
+
         <div id="hourOne" class="row time-block">
             <div class="col-md-1 hour">
-                8:30 AM
+                8:00 AM
             </div>
             <textarea class="col-md-10 description">
           </textarea>
@@ -40,29 +44,13 @@
 
         <div id="hourThree" class="row time-block">
             <div class="col-md-1 hour">
-                9:30 AM
-            </div>
-            <textarea class="col-md-10 description">
-          </textarea>
-            <button type="button" class="btn btn-danger saveBtn col-md-1">Save</button> </div>
-
-        <div id="hourFour" class="row time-block">
-            <div class="col-md-1 hour">
                 10:00 AM
             </div>
             <textarea class="col-md-10 description">
             </textarea>
             <button type="button" class="btn btn-danger saveBtn col-md-1">Save</button> </div>
 
-        <div id="hourFive" class="row time-block">
-            <div class="col-md-1 hour">
-                10:30 AM
-            </div>
-            <textarea class="col-md-10 description">
-          </textarea>
-            <button type="button" class="btn btn-danger saveBtn col-md-1">Save</button> </div>
-
-        <div id="hourSix" class="row time-block">
+        <div id="hourFour" class="row time-block">
             <div class="col-md-1 hour">
                 11:00 AM
             </div>
@@ -70,15 +58,8 @@
           </textarea>
             <button type="button" class="btn btn-danger saveBtn col-md-1">Save</button> </div>
 
-        <div id="hourSeven" class="row time-block">
-            <div class="col-md-1 hour">
-                11:30 AM
-            </div>
-            <textarea class="col-md-10 description">
-          </textarea>
-            <button type="button" class="btn btn-danger saveBtn col-md-1">Save</button> </div>
 
-        <div id="hourEight" class="row time-block">
+        <div id="hourFive" class="row time-block">
             <div class="col-md-1 hour">
                 12:00 PM
             </div>
@@ -87,16 +68,8 @@
             <button type="button" class="btn btn-danger saveBtn col-md-1">Save</button>
         </div>
 
-        <div id="hourNine" class="row time-block">
-            <div class="col-md-1 hour">
-                12:30 PM
-            </div>
-            <textarea class="col-md-10 description">
-          </textarea>
-            <button type="button" class="btn btn-danger saveBtn col-md-1">Save</button>
-        </div>
 
-        <div id="hourTen" class="row time-block">
+        <div id="hourSix" class="row time-block">
             <div class="col-md-1 hour">
                 1:00 PM
             </div>
@@ -105,16 +78,7 @@
             <button type="button" class="btn btn-danger saveBtn col-md-1">Save</button>
         </div>
 
-        <div id="hourEleven" class="row time-block">
-            <div class="col-md-1 hour">
-                1:30 PM
-            </div>
-            <textarea class="col-md-10 description">
-        </textarea>
-            <button type="button" class="btn btn-danger saveBtn col-md-1">Save</button>
-        </div>
-
-        <div id="hourTwelve" class="row time-block">
+        <div id="hourSeven" class="row time-block">
             <div class="col-md-1 hour">
                 2:00 PM
             </div>
@@ -123,16 +87,7 @@
             <button type="button" class="btn btn-danger saveBtn col-md-1">Save</button>
         </div>
 
-        <div id="hourThirteen" class="row time-block">
-            <div class="col-md-1 hour">
-                2:30 PM
-            </div>
-            <textarea class="col-md-10 description">
-              </textarea>
-            <button type="button" class="btn btn-danger saveBtn col-md-1">Save</button>
-        </div>
-
-        <div id="hourFourteen" class="row time-block">
+        <div id="hourEight" class="row time-block">
             <div class="col-md-1 hour">
                 3:00 PM
             </div>
@@ -141,16 +96,7 @@
             <button type="button" class="btn btn-danger saveBtn col-md-1">Save</button>
         </div>
 
-        <div id="hourFifteen" class="row time-block">
-            <div class="col-md-1 hour">
-                3:30 PM
-            </div>
-            <textarea class="col-md-10 description">
-              </textarea>
-            <button type="button" class="btn btn-danger saveBtn col-md-1">Save</button>
-        </div>
-
-        <div id="hourSixteen" class="row time-block">
+        <div id="hourNine" class="row time-block">
             <div class="col-md-1 hour">
                 4:00 PM
             </div>
@@ -159,16 +105,7 @@
             <button type="button" class="btn btn-danger saveBtn col-md-1">Save</button>
         </div>
 
-        <div id="hourSeventeen" class="row time-block">
-            <div class="col-md-1 hour">
-                4:30 PM
-            </div>
-            <textarea class="col-md-10 description">
-        </textarea>
-            <button type="button" class="btn btn-danger saveBtn col-md-1">Save</button>
-        </div>
-
-        <div id="hourEighteen" class="row time-block">
+        <div id="hourTen" class="row time-block">
             <div class="col-md-1 hour">
                 5:00 PM
             </div>
@@ -177,16 +114,7 @@
             <button type="button" class="btn btn-danger saveBtn col-md-1">Save</button>
         </div>
 
-        <div id="hourNinteen" class="row time-block">
-            <div class="col-md-1 hour">
-                5:30 PM
-            </div>
-            <textarea class="col-md-10 description">
-    </textarea>
-            <button type="button" class="btn btn-danger saveBtn col-md-1">Save</button>
-        </div>
-
-        <div id="hourTwenty" class="row time-block">
+        <div id="hourEleven" class="row time-block">
             <div class="col-md-1 hour">
                 6:00 PM
             </div>
