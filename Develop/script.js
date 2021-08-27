@@ -17,7 +17,7 @@ $(document).ready(function() {
 
     // added function to color code past, present and future task
     function timeTracker() {
-        var currentTime = parseInt(moment().hour());
+        var currentTime = (moment().hour());
         $(".time-block").each(function() {
             var scheduleTime = parseInt($(this).attr("id").split(".hour")[1]);
 
